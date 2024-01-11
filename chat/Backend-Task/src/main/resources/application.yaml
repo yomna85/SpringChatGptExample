@@ -1,23 +1,6 @@
 
 server:
   port: 8085
-spring:
-  jpa:
-    hibernate:
-      ddl-auto: none
-    show-sql: true
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/CustomChart
-    username: postgres
-    password: 12345
-  liquibase:
-    change-log: classpath:db.changelog/db.changelog-master.xml
-
-app:
-  allowed-origins:
-    http://41.32.3.215:8080/,http://localhost:4200
-
   openai:
     api:
       key: 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

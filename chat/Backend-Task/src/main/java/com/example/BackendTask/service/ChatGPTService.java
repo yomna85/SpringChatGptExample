@@ -15,7 +15,7 @@ import java.util.List;
 @Service
 public class ChatGPTService {
 
-    private String apiKey="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";
+    private String apiKey="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";
 
     private static final String OPEN_AI_CHAT_ENDPOINT = "https://api.openai.com/v1/chat/completions";
 
@@ -34,7 +34,7 @@ public class ChatGPTService {
         ChatGPTRequest chatGPTRequest = new ChatGPTRequest();
         chatGPTRequest.setModel("gpt-3.5-turbo");
         chatGPTRequest.setMessages(List.of(new Message("user", prompt)));
-        chatGPTRequest.setMax_tokens(50);
+        chatGPTRequest.setMax_tokens(1000);
 
         RestTemplate restTemplate = new RestTemplate();
         HttpEntity<ChatGPTRequest> request = new HttpEntity<>(chatGPTRequest, headers);
