@@ -3,7 +3,8 @@ server:
   port: 8085
   openai:
     api:
-      key: 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
+      key: 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
+      #enter your apiKey here
 
 
 
