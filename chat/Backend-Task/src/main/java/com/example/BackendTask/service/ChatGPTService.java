@@ -15,7 +15,7 @@ import java.util.List;
 
 @Service
 public class ChatGPTService {
-// enter your apiKey here
+// enter your apiKey here(Note apiKey has limited time so you need to get another one if It has expired)
     private String apiKey="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";
 
     private static final String OPEN_AI_CHAT_ENDPOINT = "https://api.openai.com/v1/chat/completions";

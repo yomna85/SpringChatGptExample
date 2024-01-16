@@ -4,7 +4,7 @@ server:
   openai:
     api:
       key: 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
-      #enter your apiKey here
+      #enter your apiKey here(Note apiKey has limited time so you need to get another one if It has expired)
 
 
 
