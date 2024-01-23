@@ -3,7 +3,6 @@ package com.example.BackendTask.service;
 import com.example.BackendTask.entity.ChatGPTRequest;
 import com.example.BackendTask.entity.ChatGPTResponse;
 import com.example.BackendTask.entity.Message;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -15,13 +14,13 @@ import java.util.List;
 
 @Service
 public class ChatGPTService {
-// enter your apiKey here(Note apiKey has limited time so you need to get another one if It has expired)
-    private String apiKey="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";
+    @Value("${openai.api.key}")
+
+    private String apiKey;
 
     private static final String OPEN_AI_CHAT_ENDPOINT = "https://api.openai.com/v1/chat/completions";
 
     private RestTemplate restTemplate;
-
     public ChatGPTService(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
